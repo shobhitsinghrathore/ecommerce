@@ -13,20 +13,20 @@ const Product = ({product}) => {
     <Card.Body>
         <Link to = {`/product/${product._id}`}>
             <Card.Title as="div" className='product-title'>
-              ${product.name}
+              {product.name}
             </Card.Title>
         </Link>
         <Card.Text as = 'div'>
-          <Rating value ={product.rating} text={`${product.numReviews}reviews`}/>
-        </Card.Text>
+          <Rating value ={product.rating} text={`${product.numReviews} reviews`}/>
+          {/* <Rating value ={product.rating} text={product.numReviews +  ' ' +'reviews'}/> */}
+        </Card.Text>  
         <Card.Text as = "h3">
-           ${product.price}
+           {product.price}
         </Card.Text>
     </Card.Body>
       
     </Card>
   )
 }
-
 export default Product
 
